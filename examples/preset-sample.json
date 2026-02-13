@@ -1,0 +1,95 @@
+{
+  "presets": [
+    {
+      "id": "title-modern",
+      "name": "Title — Modern",
+      "target": "Title",
+      "preview": "Product Name",
+      "properties": {
+        "spaceBefore": 24,
+        "spaceAfter": 12,
+        "lineHeight": 1.05,
+        "fontFamily": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
+        "fontWeight": 800,
+        "fontStyle": "normal",
+        "fontSize": 42,
+        "color": "#0f172a",
+        "letterSpacing": -0.5,
+        "textTransform": "none"
+      }
+    },
+    {
+      "id": "heading-warm",
+      "name": "Heading — Warm",
+      "target": "Heading",
+      "preview": "Section Heading",
+      "properties": {
+        "spaceBefore": 20,
+        "spaceAfter": 10,
+        "lineHeight": 1.2,
+        "fontFamily": "Georgia, 'Times New Roman', Times, serif",
+        "fontWeight": 600,
+        "fontStyle": "normal",
+        "fontSize": 28,
+        "color": "#7c2d12",
+        "letterSpacing": 0,
+        "textTransform": "none"
+      }
+    },
+    {
+      "id": "subheading-muted",
+      "name": "Subheading — Muted",
+      "target": "Subheading",
+      "preview": "Supporting statement",
+      "properties": {
+        "spaceBefore": 12,
+        "spaceAfter": 10,
+        "lineHeight": 1.35,
+        "fontFamily": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
+        "fontWeight": 500,
+        "fontStyle": "normal",
+        "fontSize": 16,
+        "color": "#475569",
+        "letterSpacing": 0.2,
+        "textTransform": "none"
+      }
+    },
+    {
+      "id": "bullets-clean",
+      "name": "Bullets — Clean",
+      "target": "Bullets",
+      "preview": "• First item\n• Second item\n• Third item",
+      "properties": {
+        "spaceBefore": 8,
+        "spaceAfter": 12,
+        "lineHeight": 1.6,
+        "fontFamily": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
+        "fontWeight": 400,
+        "fontStyle": "normal",
+        "fontSize": 15,
+        "color": "#0f172a",
+        "letterSpacing": 0,
+        "listStyleType": "disc",
+        "bulletIndent": 20
+      }
+    },
+    {
+      "id": "paragraph-readable",
+      "name": "Paragraph — Readable",
+      "target": "Paragraph",
+      "preview": "This paragraph preset is tuned for long-form readability: comfortable line length, balanced spacing and high-contrast color.",
+      "properties": {
+        "spaceBefore": 8,
+        "spaceAfter": 18,
+        "lineHeight": 1.65,
+        "fontFamily": "Merriweather, Georgia, serif",
+        "fontWeight": 400,
+        "fontStyle": "normal",
+        "fontSize": 18,
+        "color": "#0b1220",
+        "letterSpacing": 0.1,
+        "textTransform": "none"
+      }
+    }
+  ]
+}
