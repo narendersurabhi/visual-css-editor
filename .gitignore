@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.env
+.DS_Store
+npm-debug.log
+coverage/
+.vscode/
+.idea/
+
+# local envs
+.env.local
+.env.*.local
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# lockfiles (optional)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

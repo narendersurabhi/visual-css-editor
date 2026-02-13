@@ -1,0 +1,25 @@
+{
+  "name": "visual-css-editor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Compact visual CSS editor for Title, Heading, Subheading, Bullets, and Paragraph with live preview",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite",
+    "lint": "echo \"No lint configured\" && exit 0"
+  },
+  "keywords": ["visual","css","editor","vite","react"],
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0",
+    "@vitejs/plugin-react": "^5.1.0"
+  }
+}

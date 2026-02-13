@@ -1,0 +1,86 @@
+/* Compact Visual CSS Editor — styles for UI and preview */
+:root{
+  --bg:#0f1724; --panel:#0b1220; --muted:#94a3b8; --card:#0b1320;
+  --accent:#6ee7b7; --accent-2:#60a5fa; --glass:rgba(255,255,255,0.04);
+  --surface:#071021; --white:#e6eef8; --radius:12px; --gap:14px;
+  --shadow:0 6px 18px rgba(2,6,23,0.6);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace;
+  --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;padding:28px; font-family:var(--sans); background:linear-gradient(180deg,#071028 0%, #061024 45%, #04101a 100%);
+  color:var(--white); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+.app{
+  display:flex; gap:var(--gap); max-width:1100px; margin:0 auto; align-items:stretch;
+}
+/* Sidebar controls */
+.sidebar{
+  width:360px; background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-radius:var(--radius);
+  padding:18px; box-shadow:var(--shadow); border:1px solid rgba(255,255,255,0.03);
+  display:flex; flex-direction:column; gap:12px; min-height:480px;
+}
+.header{
+  display:flex; align-items:center; gap:12px;
+}
+.logo{
+  width:44px; height:44px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:inline-grid; place-items:center; border-radius:10px; flex:0 0 44px;
+  box-shadow:0 6px 16px rgba(96,165,250,0.12), inset 0 -6px 20px rgba(0,0,0,0.15);
+}
+.title{font-weight:700; font-size:15px}
+.subtitle{font-size:12px; color:var(--muted)}
+.controls{overflow:auto; padding-right:4px}
+.group{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); border-radius:10px; padding:10px; border:1px solid rgba(255,255,255,0.02)}
+.group + .group{margin-top:8px}
+.group h3{margin:0 0 8px 0; font-size:13px}
+.row{display:flex; gap:8px; align-items:center}
+.control{display:flex; align-items:center; gap:10px; padding:8px 0}
+.label{width:120px; font-size:13px; color:var(--muted)}
+.input, select{background:transparent; border:1px solid rgba(255,255,255,0.04); padding:6px 8px; border-radius:8px; color:var(--white); font-size:13px}
+.range{flex:1}
+.range input[type="range"]{width:100%; accent-color:var(--accent)}
+.color-swatch{width:36px; height:36px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); display:inline-block; vertical-align:middle}
+.font-sample{font-size:13px; color:var(--muted); padding:6px 8px; border-radius:8px; border:1px dashed rgba(255,255,255,0.03)}
+.btn{display:inline-flex; align-items:center; gap:8px; background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); color:var(--white); padding:8px 12px; border-radius:10px; cursor:pointer}
+.btn:active{transform:translateY(1px)}
+.small{font-size:12px; color:var(--muted)}
+/* Preview panel */
+.preview-wrap{flex:1; display:flex; flex-direction:column; gap:14px}
+.preview{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); border:1px solid rgba(255,255,255,0.03); min-height:480px; overflow:auto}
+.preview-header{display:flex; justify-content:space-between; align-items:center}
+.preview-meta{color:var(--muted); font-size:12px}
+.sample-block{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); padding:18px; border-radius:10px; margin-top:14px; border:1px solid rgba(255,255,255,0.02)}
+/* Tokens: Title, Heading, Subheading, Bullets, Paragraph */
+.token-title{font-family:var(--sans); font-weight:800; color:var(--white); letter-spacing:-0.6px; margin:0 0 8px 0}
+.token-heading{font-family:var(--sans); font-weight:700; color:var(--white); margin:0 0 8px 0}
+.token-sub{font-family:var(--sans); font-weight:600; color:var(--muted); margin:0 0 12px 0}
+.token-paragraph{color:var(--white); opacity:0.95; line-height:1.55; margin:0 0 12px 0}
+.token-bullets{margin:0 0 12px 22px; color:var(--white)}
+.token-bullets li{margin:6px 0}
+/* Dynamic scaling utility classes (used by JS) */
+.fs-xs{font-size:12px}
+.fs-sm{font-size:14px}
+.fs-md{font-size:16px}
+.fs-lg{font-size:20px}
+.fs-xl{font-size:28px}
+/* Spacing controls classes (toggle by JS to preview) */
+.space-before{margin-top:var(--space,0px)}
+.space-after{margin-bottom:var(--space-after,0px)}
+/* Controls UX polish */
+.control input[type="number"]{width:84px}
+select:focus, .input:focus, input:focus{outline:2px solid rgba(110,231,183,0.12); outline-offset:2px}
+.color-swatch:focus{outline:2px solid rgba(96,165,250,0.16)}
+.small-muted{font-size:12px; color:var(--muted)}
+.sep{height:1px;background:linear-gradient(90deg, rgba(255,255,255,0.03), transparent); margin:6px 0;border-radius:2px}
+/* Responsive */
+@media (max-width:960px){
+  .app{flex-direction:column;padding:18px}
+  .sidebar{width:auto}
+}
+/* lightweight accessibility helpers */
+.vis-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+/* Example theme tokens for quick dev preview: these can be modified by editor -- kept concise */
+.token-title{--space:14px}
